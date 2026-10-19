@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+<!--
+  PiperZip style rules. Deliberately small: every rule here catches a real class of bug or
+  keeps diffs readable. Formatting taste is settled by .editorconfig, not by lint noise.
+-->
+<module name="Checker">
+  <property name="severity" value="error"/>
+  <property name="charset" value="UTF-8"/>
+
+  <module name="NewlineAtEndOfFile"/>
+  <module name="FileTabCharacter"/>
+  <module name="RegexpSingleline">
+    <property name="format" value="\s+$"/>
+    <property name="message" value="Line has trailing whitespace"/>
+  </module>
+
+  <module name="LineLength">
+    <property name="max" value="125"/>
+    <property name="ignorePattern" value="^package.*|^import.*|https?://"/>
+  </module>
+
+  <module name="TreeWalker">
+    <module name="AvoidStarImport"/>
+    <module name="UnusedImports"/>
+    <module name="RedundantImport"/>
+    <module name="IllegalImport"/>
+
+    <module name="ModifierOrder"/>
+    <module name="RedundantModifier"/>
+    <module name="ArrayTypeStyle"/>
+    <module name="UpperEll"/>
+    <module name="OneStatementPerLine"/>
+    <module name="MultipleVariableDeclarations"/>
+
+    <module name="NeedBraces"/>
+    <module name="LeftCurly"/>
+    <module name="RightCurly"/>
+    <module name="EmptyBlock">
+      <property name="option" value="text"/>
+    </module>
+    <module name="EmptyStatement"/>
+
+    <module name="EqualsHashCode"/>
+    <module name="MissingSwitchDefault"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn"/>
+    <module name="StringLiteralEquality"/>
+    <module name="InnerAssignment"/>
+    <module name="FallThrough"/>
+    <module name="IllegalCatch">
+      <property name="illegalClassNames" value="Throwable,Error"/>
+    </module>
+
+    <module name="TypeName"/>
+    <module name="MethodName"/>
+    <module name="MemberName"/>
+    <module name="ParameterName"/>
+    <module name="LocalVariableName"/>
+    <module name="ConstantName"/>
+
+    <module name="MissingJavadocType">
+      <property name="scope" value="public"/>
+    </module>
+    <module name="MissingJavadocMethod">
+      <property name="scope" value="public"/>
+      <property name="allowMissingPropertyJavadoc" value="true"/>
+      <property name="allowedAnnotations" value="Override"/>
+      <property name="tokens" value="METHOD_DEF"/>
+    </module>
+  </module>
+</module>

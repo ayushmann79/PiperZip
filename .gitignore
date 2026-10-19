@@ -1,0 +1,24 @@
+# Build output
+target/
+*.class
+*.jar
+*.zip
+*.gz
+dependency-reduced-pom.xml
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local scratch
+*.log
+.env
+.env.*

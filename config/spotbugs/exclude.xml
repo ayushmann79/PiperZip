@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SpotBugs exclusions. Each entry must say WHY it is a false positive; never exclude to silence a real bug. -->
+<FindBugsFilter>
+  <!-- Main.main exits with the CLI's status code; that is the purpose of the entry point. -->
+  <Match>
+    <Class name="com.piperzip.cli.Main"/>
+    <Bug pattern="DM_EXIT"/>
+  </Match>
+</FindBugsFilter>

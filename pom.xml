@@ -36,7 +36,7 @@
 
     <!-- Dependencies -->
     <picocli.version>4.7.7</picocli.version>
-    <junit.version>5.11.4</junit.version>
+    <junit.version>6.1.3</junit.version>
 
     <!-- Plugins -->
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
